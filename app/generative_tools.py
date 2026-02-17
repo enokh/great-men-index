@@ -10,18 +10,19 @@ def generate_summary(page) -> str:
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1024,
+        max_tokens=2048,
         messages=[
             {
                 "role": "user",
                 "content": (
                     f"Below is the Wikipedia article for '{page.title}'.\n\n"
                     f"{page.text}\n\n"
-                    "Write a concise 4-paragraph summary of this person's life and significance. "
+                    "Write a concise 3-paragraph summary of this person's life and significance. "
                     "The first paragraph should cover their early life and background. "
                     "The second their major achievements and contributions, "
                     "with speical focus on their majour beliefs and ideals where applicable. "
-                    "The third-fourththeir legacy and historical impact."
+                    "In the third their legacy and historical impact. "
+                    "This part should be the longest as it is the most important."
                 ),
             }
         ],

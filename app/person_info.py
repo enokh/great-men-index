@@ -32,7 +32,8 @@ def get_person(keep_track = True):
         return None
     
     selected_person = random.choice(unseen_people)
-    
+
+    os.makedirs(os.path.dirname(SEEN_FILE), exist_ok=True)
     with open(SEEN_FILE, 'a', encoding='utf-8') as f:
         f.write(selected_person + '\n')
     
