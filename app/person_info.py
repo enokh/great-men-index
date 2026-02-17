@@ -37,3 +37,6 @@ def get_person(keep_track = True):
         f.write(selected_person + '\n')
     
     return selected_person
+
+def get_person_photo(name):
+    return None

@@ -1,19 +1,19 @@
-from get_person import get_person
-from read_wiki import get_wiki_article 
+from person_info import get_person
+from read_wiki import get_wiki_article
+from generative_tools import generate_summary
 
 def main():
+    
     person = get_person(keep_track=True)
 
-    print(f"Person Seleted: {person}")
+    print(f"Person Selected: {person}")
 
     page = get_wiki_article(person)
-    
+
     if page.exists():
-        title = page.title
-        content = page.text
-        summary = page.summary
-        print(f"Title: {title}\n")
-        print(f"Summary: {summary}\n")
+        print(f"\nName: {page.title}\n")
+        summary = generate_summary(page)
+        print(f"Summary:\n{summary}\n")
         
 if __name__ == "__main__":
 
