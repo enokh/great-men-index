@@ -20,9 +20,10 @@ def generate_summary(page) -> str:
                     "Write a concise 3-paragraph summary of this person's life and significance. "
                     "The first paragraph should cover their early life and background. "
                     "The second their major achievements and contributions, "
-                    "with speical focus on their majour beliefs and ideals where applicable. "
+                    "with special focus on their major beliefs and ideals where applicable. "
                     "In the third their legacy and historical impact. "
-                    "This part should be the longest as it is the most important."
+                    "This part should be the longest as it is the most important. "
+                    "Do not use any markdown formatting — plain text only."
                 ),
             }
         ],
